@@ -15,7 +15,9 @@ from datetime import timedelta
 import dj_database_url
 import os
 from corsheaders.defaults import default_headers
+from dotenv import load_dotenv
 
+load_dotenv()  # Загружает переменные из .env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -114,8 +116,8 @@ DATABASES = {
         'NAME': 'railway',
         'USER': 'postgres',
         'PASSWORD': 'lXmxEIngTNnVCrYKHqodcXmOsNgqtIWh',
-        'HOST': 'postgres.railway.internal',
-        'PORT': '5432',
+        'HOST': 'switchback.proxy.rlwy.net',  # Исправленный хост
+        'PORT': '52724',  # Порт из публичного DATABASE_URL
     }
 }
 print(f"Using database: {DATABASES['default']['ENGINE']} at {DATABASES['default']['NAME']}")
