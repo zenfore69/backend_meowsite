@@ -15,9 +15,6 @@ from datetime import timedelta
 import dj_database_url
 import os
 from corsheaders.defaults import default_headers
-from dotenv import load_dotenv
-
-load_dotenv()  # Загружает переменные из .env
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
